@@ -1,0 +1,16 @@
+{
+  "name": "js-testing-eurotestconf2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ava": "^0.18.0",
+    "nyc": "^10.1.2"
+  },
+  "scripts": {
+    "test": "nyc --exclude '' ava && nyc report --reporter html",
+    "watch": "ava --watch"
+  }
+}
