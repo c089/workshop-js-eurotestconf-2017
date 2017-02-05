@@ -17,6 +17,9 @@ const readCounterValue = (document) => {
 const clickIncreaseButton = document => {
   document.getElementById('increment').click();
 };
+const clickDecreaseButton = document => {
+  document.getElementById('button2').click();
+};
 
 const callbackify = promiseFn => (err, done) => promiseFn()
   .then(value => done(null, value))
@@ -27,15 +30,6 @@ test('counter is 0 on load', t => {
   const document = startApplication();
 
   t.is(readCounterValue(document), 0);
-});
-
-test('renders an increment button', t => {
-  const document = startApplication();
-
-  const button = document.getElementById('increment');
-  const buttonText = button.innerHTML;
-
-  t.is(buttonText, 'Increment it!');
 });
 
 test('increases the counter on click when server call succeeds', async t => {
@@ -85,4 +79,20 @@ test('increases the count from 1 to 2', async t => {
   await saveCounterCalled;
 
   t.is(readCounterValue(document), 2);
+});
+
+test('decreases the counter from 1 to 0', async t => {
+  let saveCounterCalled;
+  const saveCounter = callbackify(() => {
+    saveCounterCalled = Promise.resolve();
+    return saveCounterCalled;
+  });
+
+  const document = startApplication(saveCounter);
+  clickIncreaseButton(document);
+  await saveCounterCalled;
+  clickDecreaseButton(document);
+  await saveCounterCalled;
+
+  t.is(readCounterValue(document), 0);
 });

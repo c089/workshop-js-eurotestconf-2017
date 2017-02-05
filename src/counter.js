@@ -1,11 +1,19 @@
 function createCounter (document, saveCounter) {
-  var html =  '<button id="increment">Increment it!</button> <span id="counter">0</span>';
+  var html =  '<button id="increment">Increment it!</button><button id="button2">Decrement</button> <span id="counter">0</span>';
   document.body.innerHTML = html;
   document.getElementById('increment').addEventListener('click', function () {
     saveCounter(parseInt(document.getElementById('counter').innerHTML, 10) + 1, function (err) {
       if (err) {}
       else {
         document.getElementById('counter').innerHTML = parseInt(document.getElementById('counter').innerHTML, 10) + 1;
+      }
+    });
+  });
+  document.getElementById('button2').addEventListener('click', function () {
+    saveCounter(parseInt(document.getElementById('counter').innerHTML, 10) - 1, function (err) {
+      if (err) {}
+      else {
+        document.getElementById('counter').innerHTML = parseInt(document.getElementById('counter').innerHTML, 10) - 1;
       }
     });
   });

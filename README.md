@@ -57,7 +57,6 @@ Exercise:
   5. Repeat
   
 ## ECMAScript.current: Catching up on ECMAScript 2015 (ES6) and 2016
-
 Requirements: basic javascript and unit testing
 
 Recent ECMAScript releases brought a load of new features, making the language
@@ -112,11 +111,12 @@ Exercise:
 
 Requirements: Knowledge of basic ES5 and browser APIs
 
-In `counter.js` you find a tiny web application: It only shows a counter and
-offers a single button to increment that counter. Before the counter is updated,
-the new value should be persisted to a server, and only of that suceeds should
-the counter be updated. It is covered by tests in `counter.test.js`, but the
-implementation is (intentionally) quite a mess already, so we need to refactor.
+In `counter.js` you find a tiny web application: It only shows a counter with
+buttons to increment and decrement it. Before the counter is updated, the new
+value should be persisted to a server, and only of that suceeds should the
+counter be updated. It is covered by tests in `counter.test.js`, but the
+implementation is (intentionally) quite a mess already so we need to refactor
+before adding new features.
 
 ### Example refactorings
 
