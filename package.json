@@ -1,5 +1,5 @@
 {
-  "name": "js-testing-eurotestconf2017",
+  "name": "workshop-eurotestconf2017",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {},
@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "ava": "^0.18.0",
+    "jsdom": "^9.10.0",
     "nyc": "^10.1.2"
   },
   "scripts": {
