@@ -37,7 +37,7 @@ test('counter is 0 on load', t => {
   t.is(readCounterValue(document), 0);
 });
 
-test('increases the counter on click when server call succeeds', async t => {
+test('increases the counter on click when server call succeeds', t => {
   const document = startApplication(saveStub);
 
   clickIncreaseButton(document);
