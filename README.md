@@ -15,6 +15,7 @@ example shows how to run unit tests for frontend code using jsdom on node.js.
 
 ## Installation and running tests
 
+- Make sure you have the latest version of node.js (7.5.0 as time of writing)
 - Clone this repository
 - There are example tests for each exercise in the `src/` folder
 - run `npm install` to install ava, a modern and simple test runner with support
