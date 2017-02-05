@@ -1,5 +1,7 @@
 # Intro
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/c089/workshop-js-eurotestconf-2017.svg)](https://greenkeeper.io/)
+
 This workshop consists of a set of exercises to practice using more modern
 features of JavaScript. We're using the latest version of node.js and the ava
 test runner, so we can use all the latest language features (except for the es6
