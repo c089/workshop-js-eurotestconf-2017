@@ -107,6 +107,56 @@ Exercise:
 - Once you're comfortable with async functions, try using them to refactor the
   code in the refactoring exercise
   
+## typechecked.ES: Checking out flow
+
+JavaScript can be fun. For example, what is the value of each of the following?
+
+```
+[] + [];
+[] + {};
+{} + [];
+{} + {};
+Array(16).join("wat" + 1);
+Array(16).join("wat" - 1) + "Batman";
+```
+
+(If you don't know these from the classic talk "wat" by Gary Bernhardt, feel
+free to write a test for each with your assumption, and see if you're right ;))
+
+While all of these are valid per specification, we can immediately see that
+adding an array to an object doesn't make sense because they have different
+types. But in reality, this kind of error is much more sneaky because our values
+aren't in plain sight, but hidden behind variables and function calls. `f(x) +
+g(y)` seems fine until you consider one of those functions may return an object,
+the other an array.
+
+Let's try out static type checking with flow. If you've never worked with a
+language using static type checks, this means that a special program (usually
+the compiler, in our case a specialized utility, flow) will analyze your code
+without running it, to see if there's any type errors. To do this, it needs to
+know what the types in your code are. Flow is pretty good at figuring this out
+on it's own in many cases (e.g. in `const x = 1 + 2` it can infer that `x` must
+be of type `Number` and remember that for when other code uses x), but not
+always. In that case (and for other reasons, such as documentation), you will
+need to add the type information yourself using special syntax, e.g. you could
+write this instead : `const x: Number = 1 + 2`).
+
+See [Getting Started with flow](https://flowtype.org/docs/getting-started.html)
+and the rest of the flow documentation for more.
+
+Exercise:
+
+- You can type-check the code in this repository using `npm run typecheck`. It
+  starts a server the first time, which will take a few seconds, but it should
+  give very fast feedback when you run it after that.
+- Only files that opt-in using a `@flow` comment will be checked.
+- Check out `wat.js` and see what flow does with each of these examples
+- If you've written code today, try adding the `@flow` comment to your files and
+  see if flow catches errors you didn't - or maybe flags things that are
+  correct?
+- Discuss with your pair partner the benefits an drawbacks of this and how it
+  relates to testing your code with unit tests
+
 ## ES.web: Refactoring a web application
 
 Requirements: Knowledge of basic ES5 and browser APIs

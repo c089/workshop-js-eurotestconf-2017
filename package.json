@@ -7,11 +7,23 @@
   "license": "MIT",
   "dependencies": {
     "ava": "^0.18.0",
+    "babel-preset-flow": "^1.0.0",
+    "flow-bin": "^0.38.0",
     "jsdom": "^9.10.0",
     "nyc": "^10.1.2"
   },
+  "ava": {
+    "babel": {
+      "presets": [
+        "@ava/stage-4",
+        "@ava/transform-test-files",
+        "flow"
+      ]
+    }
+  },
   "scripts": {
     "test": "nyc --exclude '' ava && nyc report --reporter html",
-    "watch": "ava --watch"
+    "watch": "ava --watch",
+    "typecheck": "flow"
   }
 }
