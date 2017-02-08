@@ -15,15 +15,15 @@ You could also use this to get familiar with webpack2 as a module bundler.
   repeat the same, applying what your learned before)
 
 
-|----------------------------------------------|--------------------------------------------------------------|
-| Exercise                                     | Recommended for folks that know...                           |
-|----------------------------------------------|--------------------------------------------------------------|
-| TDD kata                                     | Basic JavaScript                                             |
-| ES.current (ES2016/ES2016 language features) | Basic JavaScript                                             |
-| ES.next: async / await                       | Some ES2015, callback-style async programming                |
-| typechecked.ES: flow                         | Basic JavaScript                                             |
-| ES.web: refactoring                          | Basic JavaScript web development using callbacks and DOM API |
-|----------------------------------------------|--------------------------------------------------------------|
+|---------------------------|----------------------|------------------------------------------------------|
+| Exercise                  | Focus                | Recommended for folks that know...                   |
+|---------------------------|----------------------|------------------------------------------------------|
+| TDD kata                  | Test-Driving code    | Basic JS                                             |
+| ES.current: ES2014/ES2016 | Language Features    | Basic JS                                             |
+| typechecked.ES: flow      | Static Type Checking | Basic JS                                             |
+| ES.next: async / await    | Language Features    | Callback-style async programming                     |
+| ES.web: refactoring       | Improving code       | Basic JS web development using callbacks and DOM API |
+|---------------------------|----------------------|------------------------------------------------------|
 
 
 ## Installation and running tests
