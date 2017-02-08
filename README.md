@@ -91,7 +91,7 @@ Part of JavaScript's bad reputation still comes from "callback hell" code like t
 const doSomething = function (done) {
   someAsyncFunction(function (err, a) {
     if(err) done(err);
-    someOtherAsyncThing(function (err2, b) {
+    someOtherAsyncThing(a, function (err2, b) {
       if(err2) done(err2);
       done(b);
     });
@@ -103,13 +103,24 @@ With ES2015, a standardized `Promise` is part of the language and async
 functions are a new feature built on top, which allow to write async code in a
 much more concise style. The feature has recently been promoted to stage-4,
 making it likely to become part ES2017. We can already use it with the testing
-stack in this repository.
+stack in this repository to rewrite the code as:
+
+```js
+const doSomething = async () => {
+  const a = await someAsyncFunction();
+  const b = await someOtherAsyncThing(a);
+  return b;
+}
+```
 
 Exercise:
 
 - Use [this introduction](http://exploringjs.com/es2016-es2017/ch_async-functions.html)
   to learn about async functions and document what you learn using tests.
 - A starting point is provided in `es2017.test.js`.
+- Once you've learned about the bascis, try test-driving a `promisify` function:
+  It should be able to take a callback-style function and wrap it in a new
+  function that returns a promise instead.
 - Once you're comfortable with async functions, try using them to refactor the
   code in the refactoring exercise
   
