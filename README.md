@@ -19,7 +19,7 @@ You could also use this to get familiar with webpack2 as a module bundler.
 | Exercise                  | Focus                | Recommended for folks that know...                   |
 |---------------------------|----------------------|------------------------------------------------------|
 | TDD kata                  | Test-Driving code    | Basic JS                                             |
-| ES.current: ES2014/ES2016 | Language Features    | Basic JS                                             |
+| ES.current: ES2015/ES2016 | Language Features    | Basic JS                                             |
 | typechecked.ES: flow      | Static Type Checking | Basic JS                                             |
 | ES.next: async / await    | Language Features    | Callback-style async programming                     |
 | ES.web: refactoring       | Improving code       | Basic JS web development using callbacks and DOM API |
