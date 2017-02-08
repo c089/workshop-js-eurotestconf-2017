@@ -69,11 +69,10 @@ Exercise:
 
 Recent ECMAScript releases brought a load of new features, making the language
 more pleasant to work with. Most of the new things have been added with
-ECMAScript2015, with a tiny update in 2016. Use the provided resources to
-explore the new features, and write unit tests to document what you learned.
-
-Some features I enjoy and recommend learning about: arrow functions,
-block-scoped bindings (let and const), Promises, destructuring.
+ECMAScript2015, with a tiny update in 2016. Use
+e.g. [Core ES6 Features](http://exploringjs.com/es6/ch_core-features.html) from
+Exploring ES6 as a starting point, and write unit tests to document what you
+learned.
 
 ### Exercise
 
