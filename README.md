@@ -6,12 +6,25 @@ test runner, so we can use all the latest language features (except for the es6
 module system). To reduce scope, I intentionally left out transpiling code for
 browsers to minimize setup complexity and dependencies, but the web refactoring
 example shows how to run unit tests for frontend code using jsdom on node.js.
+You could also use this to get familiar with webpack2 as a module bundler.
 
 - Find a pair partner and choose one of the exercises based on your skill level
   and learning goal
 - After each session, change pair partners. Take a minute to explain to each
   other what you learned in the previous session, then pick a new exercise (or
   repeat the same, applying what your learned before)
+
+
+|----------------------------------------------|--------------------------------------------------------------|
+| Exercise                                     | Recommended for folks that know...                           |
+|----------------------------------------------|--------------------------------------------------------------|
+| TDD kata                                     | Basic JavaScript                                             |
+| ES.current (ES2016/ES2016 language features) | Basic JavaScript                                             |
+| ES.next: async / await                       | Some ES2015, callback-style async programming                |
+| typechecked.ES: flow                         | Basic JavaScript                                             |
+| ES.web: refactoring                          | Basic JavaScript web development using callbacks and DOM API |
+|----------------------------------------------|--------------------------------------------------------------|
+
 
 ## Installation and running tests
 
@@ -39,8 +52,6 @@ The following resources should help you with using latest language features:
 
 ## Unit testing and the TDD workflow
 
-Requirements: basic javascript
-
 Exercise: 
 
 - Follow the instructions of the [String Calculator kata](http://osherove.com/tdd-kata-1/)
@@ -57,7 +68,6 @@ Exercise:
   5. Repeat
   
 ## ECMAScript.current: Catching up on ECMAScript 2015 (ES6) and 2016
-Requirements: basic javascript and unit testing
 
 Recent ECMAScript releases brought a load of new features, making the language
 more pleasant to work with. Most of the new things have been added with
@@ -76,8 +86,6 @@ block-scoped bindings (let and const), Promises, destructuring.
 - If you're struggling to come up with test cases, see es6katas for examples
 
 ## ES.next: async/await
-
-Requirements: callback functions and promises
 
 Part of JavaScript's bad reputation still comes from "callback hell" code like this:
 
@@ -158,8 +166,6 @@ Exercise:
   relates to testing your code with unit tests
 
 ## ES.web: Refactoring a web application
-
-Requirements: Knowledge of basic ES5 and browser APIs
 
 In `counter.js` you find a tiny web application: It only shows a counter with
 buttons to increment and decrement it. Before the counter is updated, the new
