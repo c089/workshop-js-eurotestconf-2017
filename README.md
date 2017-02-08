@@ -174,12 +174,18 @@ counter be updated. It is covered by tests in `counter.test.js`, but the
 implementation is (intentionally) quite a mess already so we need to refactor
 before adding new features.
 
-### Example refactorings
+Some exmaple refactorings and things to consider:
 
 - extract variables with meaningful names
-- upgrade to ES6 syntax, e.g. arrow functions and const bindings
-- refactor from callbacks to ES2015 promises or ES2017 async/await
+- upgrade to ES6 syntax, e.g. arrow functions and const bindings. Note that
+  depending on which "new" features you use, your browser may not yet support
+  them. Try to set up a module bundler such as webpack to make your code
+  cross-browser compatible
+- refactor from callbacks to ES2015 promises,then use async/await. Note that
+  this will change the signature of the createCounter function, which is called
+  from an untested code path (use the coverage report). Think about why this
+  code is needed, why it's hard to test and how you would test it.
 - decouple the application, e.g. separate the state management from the view
-  layer. if you know libraries like React.js which would help you with that,
+  layer. If you know libraries like React.js which would help you with that,
   feel free to include them
   
