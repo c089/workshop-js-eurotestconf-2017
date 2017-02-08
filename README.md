@@ -55,8 +55,8 @@ The following resources should help you with using latest language features:
 Exercise: 
 
 - Follow the instructions of the [String Calculator kata](http://osherove.com/tdd-kata-1/)
-- Write your tests in stringcalculator.test.js, which includes an example to get
-  you started.
+- Write your tests in [stringcalculator.test.js](src/stringcalculator.test.js),
+  which includes an example to get you started.
 - The example deliberately does not use newer language features to be
   understandable for most JS programmers, but you can write your code using
   modern features if you like.
